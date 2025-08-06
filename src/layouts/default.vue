@@ -2,61 +2,76 @@
 import { BiSolidPhoneCall } from "vue-icons-plus/bi";
 import { BsFacebook } from "vue-icons-plus/bs";
 import { CiSearch } from "vue-icons-plus/ci";
-import { Fa6FacebookMessenger } from "vue-icons-plus/fa6";
+import { Fa6FacebookMessenger, Fa6LocationDot } from "vue-icons-plus/fa6";
+import { IoMailSharp } from "vue-icons-plus/io";
+import { RiBillFill, RiBillLine } from "vue-icons-plus/ri";
 import { SiZalo } from "vue-icons-plus/si";
 </script>
 
 <template>
     <div class="bg-[#0B3E06] py-2 sticky top-0">
-        <div class="text-white flex gap-3 justify-end mx-2 md:mx-12 lg:mx-30">
-            <div class="flex gap-2"><BiSolidPhoneCall /> 0837926986</div>
-            <div class="flex gap-2"><BiSolidPhoneCall /> 09189300</div>
+        <div class="text-white flex gap-7 justify-end mx-2 md:mx-12 lg:mx-30">
+            <div class="flex gap-2"><BiSolidPhoneCall /> 0837 926 986</div>
+            <div class="flex gap-2"><BiSolidPhoneCall /> 0398 420 080</div>
         </div>
     </div>
     <header class="flex gap-3 justify-between md:items-center mx-2 md:mx-12 lg:mx-30">
-        <img src="/tongkimphat.logo.jpg" class="w-30 hidden md:block" alt="Tòng Kim Phát Logo" />
-        <nav class="flex gap-2 md:gap-6 lg:gap-13 md:items-center text-center py-2 text-sm md:text-lg justify-between md:justify-end w-full">
+        <img src="/tongkimphat.logo.jpg" class="w-50 hidden md:block" alt="Tòng Kim Phát Logo" />
+        <nav class="flex gap-2 md:gap-6 lg:gap-13 md:items-center text-center py-2 text-sm md:text-[1.3rem] justify-between md:justify-end w-full">
             <router-link class="hover:border-b-1" to="/">Trang chủ</router-link>
-            <router-link class="hover:border-b-1" to="/">Hotline</router-link>
-            <router-link class="hover:border-b-1" to="/">Giải đáp thắc mắc</router-link>
+            <router-link class="hover:border-b-1" to="/">Giới thiệu</router-link>
+            <router-link class="hover:border-b-1" to="/">Tẩy trắng</router-link>
+            <router-link class="hover:border-b-1" to="/">Xi mạ</router-link>
+            <router-link class="hover:border-b-1" to="/">Đánh bóng</router-link>
+            <router-link class="hover:border-b-1" to="/giai-dap-thac-mac">Giải đáp thắc mắc</router-link>
             <router-link class="hover:border-b-1" to="/">Tuyển dụng</router-link>
             <CiSearch />
         </nav>
     </header>
     <router-view></router-view>
-    <div class="fixed bottom-12 md:bottom-4 left-4 text-white flex gap-4">
-        <div class="bg-[#0B3E06] w-fit p-2 rounded flex gap-2 shadow-2xl"><BiSolidPhoneCall /> 0837926986</div>
-        <div class="bg-[#0B3E06] w-fit p-2 rounded flex gap-2 shadow-2xl"><BiSolidPhoneCall /> 09189300</div>
+    <div class="fixed bottom-12 md:bottom-4 left-2 md:left-4 text-white flex gap-3 md:gap-5 md:gap-10 md:text-[1.5rem]">
+        <div class="bg-[#0B3E06] w-fit px-4 md:px-5 py-4 rounded flex gap-2 shadow-2xl flex items-center"><BiSolidPhoneCall /> 0837 926 986</div>
+        <div class="bg-[#0B3E06] w-fit px-4 md:px-5 py-4 rounded flex gap-2 shadow-2xl flex items-center"><BiSolidPhoneCall /> 0398 420 080</div>
     </div>
-    <footer class="py-4 bg-[#0B3E06] text-white">
+    <footer class="py-10 md:py-20 text-white" style="background-image: linear-gradient(rgb(11 62 6 / 85%), rgb(11 62 6 / 85%)), url(././polish/p4.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
         <div class="mx-2 md:mx-12 lg:mx-30">
-            <div class="mb-3"><img src="/tongkimphat.logo.jpg" class="w-20" alt="Tòng Kim Phát Logo" /></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                <div class="flex flex-col">
-                    <div class="font-semibold text-xl mb-3">
+            <div class="mb-3"><img src="/tongkimphat.logo.jpg" class="w-25" alt="Tòng Kim Phát Logo" /></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-0">
+                <div class="flex flex-col gap-2">
+                    <div class="font-semibold md:text-xl mb-3">
                         Công Ty Trách Nhiệm Hữu Hạn <br />
                         Tòng Kim Phát
                     </div>
-                    <div class="flex flex-col gap-2">
-                        <router-link class="hover:border-white border-transparent border-b-1" to="/">Dịch vụ</router-link>
-                        <router-link class="hover:border-white border-transparent border-b-1" to="/">Hotline</router-link>
-                        <router-link class="hover:border-white border-transparent border-b-1" to="/">Giải đáp thắc mắc</router-link>
-                        <router-link class="hover:border-white border-transparent border-b-1" to="/">Tuyển dụng</router-link>
-                    </div>
+                    <div class="flex items-center gap-1 text-[.8rem] md:text-[1rem]"><Fa6LocationDot /> D2/9k3 Tổ 3 Ấp 4 Xã Vĩnh Lộc, Tp.Hồ Chí Minh</div>
+                    <div class="flex items-center gap-1 text-[.8rem] md:text-[1rem]"><RiBillFill /> Mã số thuế: 0318 259 893</div>
+                    <div class="flex items-center gap-1 text-[.8rem] md:text-[1rem]"><IoMailSharp /> Email: Tongkimphat78@gmail.com</div>
                 </div>
-                <div class="flex flex-col">
-                    <div class="font-semibold text-xl mb-3">Liên kết nhanh</div>
-                    <div class="flex gap-4">
-                        <div><BsFacebook /></div>
-                        <div><Fa6FacebookMessenger /></div>
-                        <div><SiZalo /></div>
+                <div class="flex flex-col gap-1 md:pl-20">
+                        <div class="font-semibold md:text-xl mb-3 border-b-1 md:border-b-0">Mục lục</div>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Trang chủ</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Giới thiệu</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Tẩy trắng</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Xi mạ</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Đánh bóng</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Hotline</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Giải đáp thắc mắc</router-link>
+                        <router-link class="hover:border-white border-transparent border-b-1 text-[.8rem] md:text-[1rem]" to="/">Tuyển dụng</router-link>
                     </div>
+                <div class="flex flex-col">
+                    <div class="font-semibold md:text-xl mb-3 border-b-1 md:border-b-0">Liên kết nhanh</div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex gap-2 items-center text-[.8rem] md:text-[1rem]"><IoMailSharp /> Mail</div>
+                        <div class="flex gap-2 items-center text-[.8rem] md:text-[1rem]"><div class="w-fit p-[1px] rounded bg-white text-black"><SiZalo /></div>Zalo</div>
+                        <div class="flex gap-2 items-center text-[.8rem] md:text-[1rem]"><BsFacebook /> Facebook</div>
+                        <div class="flex gap-2 items-center text-[.8rem] md:text-[1rem]"><Fa6FacebookMessenger /> Messenger</div>
+                    </div>
+                    
                 </div>
                 <div class="flex flex-col md:col-span-2 lg:col-span-1">
-                    <div class="font-semibold text-xl mb-3">Bản đồ</div>
+                    <div class="font-semibold md:text-xl mb-3 border-b-1 md:border-b-0">Bản đồ</div>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.726246862278!2d106.60737077585705!3d10.832249289319908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bc9600235d5%3A0xa9d9745f5fa8e4c!2zMzA5IGEgxJAuIFBoYW4gVsSDbiBI4bubbiwgVMOibiBUaOG7m2kgTmjhuqV0LCBRdeG6rW4gMTIsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1754302562033!5m2!1svi!2s"
-                        height="400"
+                        height="250"
                         style="border: 0"
                         allowfullscreen="true"
                         loading="lazy"

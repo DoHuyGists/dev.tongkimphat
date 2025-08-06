@@ -2,6 +2,7 @@ import { createMemoryHistory, createRouter, createWebHashHistory, createWebHisto
 
 import defaultLayout from "./layouts/default.vue"
 import homePage from "./pages/home/index.vue"
+import qa from "./pages/q&a/index.vue"
 
 const routes = [
   { 
@@ -14,7 +15,11 @@ const routes = [
           {
             path: "",
             component: homePage
-          }
+          },
+          {
+            path: "/giai-dap-thac-mac",
+            component: qa
+          },
         ]
       }
     ]
